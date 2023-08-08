@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "car",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "seats": {
+      "type": "integer"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "newArrivals": {
+      "type": "boolean"
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": [
+        "Used",
+        "New"
+      ]
+    },
+    "fuelType": {
+      "type": "enumeration",
+      "enum": [
+        "Diesel",
+        "petrol"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "transimition": {
+      "type": "enumeration",
+      "enum": [
+        "Auto",
+        "Manual",
+        "Gsg"
+      ]
+    },
+    "doors": {
+      "type": "integer"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "cars"
+    },
+    "make": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::make.make",
+      "inversedBy": "cars"
+    }
+  }
+}

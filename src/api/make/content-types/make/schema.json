@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "makes",
+  "info": {
+    "singularName": "make",
+    "pluralName": "makes",
+    "displayName": "make",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::car.car",
+      "mappedBy": "make"
+    }
+  }
+}
