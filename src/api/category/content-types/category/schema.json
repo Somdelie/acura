@@ -4,7 +4,7 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "category",
+    "displayName": "categories",
     "description": ""
   },
   "options": {
@@ -20,6 +20,12 @@
       "relation": "oneToMany",
       "target": "api::car.car",
       "mappedBy": "category"
+    },
+    "makes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::make.make",
+      "inversedBy": "categories"
     }
   }
 }

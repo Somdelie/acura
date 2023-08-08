@@ -31,6 +31,12 @@
       "relation": "oneToMany",
       "target": "api::car.car",
       "mappedBy": "make"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "makes"
     }
   }
 }
